@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { ISchemaFieldComponentProps } from '@formily/react-schema-renderer';
 import { RadioGroup } from '../components/radio';
 import { getComponentProps, getDisabled, getEnum } from '../util';
-import { InputItem, Picker } from 'antd-mobile';
+import { Input as InputItem, Picker } from 'antd-mobile';
 import { range } from 'lodash';
 import PickerItem from '../PickerItem';
 import './style.less';
@@ -18,7 +18,7 @@ export const NumpickerRadioOther = (props: ISchemaFieldComponentProps) => {
 
   const [otherText, setOtherText] = useState<string | undefined>(props.value?.otherText);
   const [inputAble, setInputAble] = useState<boolean>(props.value?.value === '其他');
-  const [num, setNum] = useState<number | undefined>(props.value?.num);
+  const [num, setNum] = useState<string | undefined>(props.value?.num);
   const inputRef = useRef<{
     focus: () => void
   }>();
@@ -72,15 +72,6 @@ export const NumpickerRadioOther = (props: ISchemaFieldComponentProps) => {
 
   return (
     <div className="">
-      <Picker
-        data={range(1, 100).map(i => ({ label: i, value: i }))}
-        cols={1}
-        extra={newProps.placeholder || newProps.extra}
-        onChange={onPickerChange}
-        value={num ? [num] : []}
-      >
-        <PickerItem className="formily-numpicker__listItem" clear={props.value?.num} onClear={onClear} />
-      </Picker>
       <RadioGroup {...newProps}></RadioGroup>
       <InputItem
         className={`checkboxOtherInput ${inputAble ? 'active' : ''}`}

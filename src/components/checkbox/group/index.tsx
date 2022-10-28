@@ -8,6 +8,7 @@ export interface CheckboxGroupProps {
   name?: string;
   options?: string[] | Array<{ label: string; value: string; disabled?: boolean }>;
   value?: any;
+  children?: any;
   onChange?: (values: any) => void;
   style?: React.CSSProperties;
   className?: string;

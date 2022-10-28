@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ISchemaFieldComponentProps } from '@formily/react-schema-renderer';
-import { ImagePicker } from 'antd-mobile';
+import { ImageUploader } from 'antd-mobile';
 import * as imgViewer from 'h5-imageviewer';
 import { getComponentProps, getDisabled, getEnum } from '../util';
 import deleteImageSrc from './delete.png';
@@ -98,7 +98,7 @@ export const Upload = (props: ISchemaFieldComponentProps) => {
             </div>
           ))}
         </div>
-        {!newProps.disabled && <ImagePicker {...newProps} length={1} />}
+        {!newProps.disabled && <ImageUploader {...newProps} length={1} />}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import {
 } from '@formily/react-schema-renderer';
 import { getComponentProps, getDisabled, getEnum } from '../util';
 import CheckboxGroup from '../components/checkbox/group';
-import { InputItem } from 'antd-mobile';
+import { Input as InputItem } from 'antd-mobile';
 import './index.less';
 
 export const CheckboxOther = (props: ISchemaFieldComponentProps) => {

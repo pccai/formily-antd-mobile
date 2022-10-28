@@ -8,6 +8,7 @@ export interface RadioGroupProps {
   name?: string;
   options?: string[] | Array<{ label: string; value: string; disabled?: boolean }>;
   value?: any;
+  children?: any;
   onChange?: (e: Event) => void;
   style?: React.CSSProperties;
   className?: string;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ISchemaFieldComponentProps } from '@formily/react-schema-renderer'
-import { InputItem } from 'antd-mobile';
+import { Input as InputItem } from 'antd-mobile';
 import { getComponentProps, getDisabled } from '../util';
 import './style.less';
 
